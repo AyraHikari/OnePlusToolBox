@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("OnePlusToolBox")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("A tool box for OnePlus running OxygenOS/HydrogenOS 11")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Ayra Hikari")]
 [assembly: AssemblyProduct("OnePlusToolBox")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCopyright("Copyright © AyraHikari 2021")]
+[assembly: AssemblyTrademark("Ayra Hikari")]
 [assembly: AssemblyCulture("")]
 
 // Setting ComVisible to false makes the types in this assembly not visible 
