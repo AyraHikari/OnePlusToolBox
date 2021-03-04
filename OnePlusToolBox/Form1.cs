@@ -267,8 +267,8 @@ namespace OnePlusToolBox
 
         private void button9_Click(object sender, EventArgs e)
         {
-            string clog = "Console log:\n";
-            clog += "> Refreshing...\n";
+            string clog = "Console log:";
+            clog += "\n> Refreshing...";
             PSlog.Text = clog;
 
             var chek = adb("shell pm list users");
@@ -277,15 +277,36 @@ namespace OnePlusToolBox
                 if (ce.Contains("}")) { var usr = ce.Split(new string[] { "}" }, StringSplitOptions.None); var usrid = usr[0].Split(new string[] { ":" }, StringSplitOptions.None);
                     if (usrid[0] == "999") { hasParalel = true; } }
             }
-            
+
+            clog += "\n> Searching apps...";
+            PSlog.Text = clog;
+            var pak1 = adb("shell pm list packages");
+            treeView1.Nodes.Clear();
+            var spak1 = pak1.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
+            treeView1.Nodes.Add("Apps");
+            foreach (string lpak1 in spak1)
+            {
+                var pakname1 = lpak1.Split(new string[] { "package:" }, StringSplitOptions.None);
+                if (pakname1.Length > 1)
+                {
+                    treeView1.Nodes[0].Nodes.Add(pakname1[1]);
+                    /*
+                    var getact = adb("shell \"cmd package resolve-activity --brief " + pakname[1] + " | tail -n 1\"");
+                    if (!getact.Contains("No activity found") & outsplit(getact) != "")
+                    {
+                        comboBox2.Items.Add(pakname[1]);
+                    } */
+                    comboBox2.Items.Add(pakname1[1]);
+                }
+            }
+
             if (hasParalel)
             {
-                clog += "> Paralel storage detected, searching...\n";
+                clog += "\n> Paralel storage detected";
+                clog += "\n> Searching paralel apps...";
                 PSlog.Text = clog;
-
-                var packages = "";
+                
                 var pak = adb("shell pm list packages --user 999");
-                treeView1.Nodes.Clear();
                 var spak = pak.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
                 treeView1.Nodes.Add("Paralel Apps");
                 foreach (string lpak in spak)
@@ -293,26 +314,27 @@ namespace OnePlusToolBox
                     var pakname = lpak.Split(new string[] { "package:" }, StringSplitOptions.None);
                     if (pakname.Length > 1)
                     {
-                        treeView1.Nodes[0].Nodes.Add(pakname[1]);
-                        comboBox3.Items.Add(pakname[1]);
+                        treeView1.Nodes[1].Nodes.Add(pakname[1]);
+                        /*
                         var getact = adb("shell \"cmd package resolve-activity --brief " + pakname[1] + " | tail -n 1\"");
                         if (!getact.Contains("No activity found") & outsplit(getact) != "")
                         {
-                            packages += pakname[1] + "\n";
                             comboBox2.Items.Add(pakname[1]);
                         }
+                        */
+                        comboBox3.Items.Add(pakname[1]);
                     }
                 }
                 button1.Enabled = true;
                 groupBox1.Enabled = true;
                 groupBox2.Enabled = true;
                 groupBox3.Enabled = true;
-                clog += "> Done!";
             } else
             {
-                clog += "> Paralel storage not detected!\n";
+                clog += "\n> Paralel storage not detected!";
             }
 
+            clog += "\n> Everything was done!";
             PSlog.Text = clog;
         }
 
@@ -368,6 +390,12 @@ namespace OnePlusToolBox
             process.StartInfo.Arguments = "-s " + deviceID + " shell";
             // process.StartInfo.UseShellExecute = false;
             process.Start();
+        }
+
+        private void PSlog_TextChanged(object sender, EventArgs e)
+        {
+            PSlog.SelectionStart = PSlog.Text.Length;
+            PSlog.ScrollToCaret();
         }
     }
 }
