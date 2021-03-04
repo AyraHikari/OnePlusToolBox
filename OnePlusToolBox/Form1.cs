@@ -66,6 +66,7 @@ namespace OnePlusToolBox
 
         public bool connect(string deviceIP = "")
         {
+            if (DeviceList.Text == "No device found" & deviceIP == "") { return false; }
             if (deviceIP != "")
             {
                 connectIP = deviceIP;
@@ -101,6 +102,7 @@ namespace OnePlusToolBox
                         }
                     }
                 }
+                if (DeviceList.Text == "No device found" & deviceIP != "") { DeviceList.Text = deviceIP; }
                 var connectID = DeviceList.Text;
                 if (deviceIP != "")
                 {
@@ -109,7 +111,7 @@ namespace OnePlusToolBox
                 var devmodel = adb("-s " + connectID + " shell getprop ro.product.model");
                 if (devmodel.Contains("error") | devmodel == "")
                 {
-                    var confirmResult = MessageBox.Show("Check your device and cable, then connect again",
+                    var confirmResult = MessageBox.Show(devmodel,
                         "Connection failed",
                         MessageBoxButtons.RetryCancel);
                     if (confirmResult == DialogResult.Cancel)
@@ -167,10 +169,10 @@ namespace OnePlusToolBox
                     deviceName = " (" + outsplit(devmodel) + ")";
                     BotomDevice.Text = "Device connected: " + deviceID + " (" + outsplit(devmodel) + ")";
                     groupBox6.Enabled = true;
+                    BotomDevice.ForeColor = Color.Green;
                     break;
                 }
             }
-            BotomDevice.ForeColor = Color.Green;
             return true;
         }
 
@@ -349,6 +351,14 @@ namespace OnePlusToolBox
             {
                 connect(textBox2.Text);
             }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            adb("disconnect");
+            MessageBox.Show("Disconnected everything!");
+            BotomDevice.Text = "Device connected: null";
+            BotomDevice.ForeColor = SystemColors.ControlText;
         }
     }
 }

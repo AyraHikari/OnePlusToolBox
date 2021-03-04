@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("");
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Apps", new System.Windows.Forms.TreeNode[] {
-            treeNode13});
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("");
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Paralel Apps", new System.Windows.Forms.TreeNode[] {
-            treeNode15});
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("");
+            System.Windows.Forms.TreeNode treeNode18 = new System.Windows.Forms.TreeNode("Apps", new System.Windows.Forms.TreeNode[] {
+            treeNode17});
+            System.Windows.Forms.TreeNode treeNode19 = new System.Windows.Forms.TreeNode("");
+            System.Windows.Forms.TreeNode treeNode20 = new System.Windows.Forms.TreeNode("Paralel Apps", new System.Windows.Forms.TreeNode[] {
+            treeNode19});
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -281,6 +281,7 @@
             this.button14.TabIndex = 2;
             this.button14.Text = "Disconnect";
             this.button14.UseVisualStyleBackColor = true;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button13
             // 
@@ -423,17 +424,17 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(6, 19);
             this.treeView1.Name = "treeView1";
-            treeNode13.Name = "Node2";
-            treeNode13.Text = "";
-            treeNode14.Name = "Apps1";
-            treeNode14.Text = "Apps";
-            treeNode15.Name = "Node3";
-            treeNode15.Text = "";
-            treeNode16.Name = "Apps2";
-            treeNode16.Text = "Paralel Apps";
+            treeNode17.Name = "Node2";
+            treeNode17.Text = "";
+            treeNode18.Name = "Apps1";
+            treeNode18.Text = "Apps";
+            treeNode19.Name = "Node3";
+            treeNode19.Text = "";
+            treeNode20.Name = "Apps2";
+            treeNode20.Text = "Paralel Apps";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode14,
-            treeNode16});
+            treeNode18,
+            treeNode20});
             this.treeView1.Size = new System.Drawing.Size(490, 133);
             this.treeView1.TabIndex = 7;
             // 
