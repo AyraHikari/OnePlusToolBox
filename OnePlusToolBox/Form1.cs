@@ -360,5 +360,14 @@ namespace OnePlusToolBox
             BotomDevice.Text = "Device connected: null";
             BotomDevice.ForeColor = SystemColors.ControlText;
         }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            Process process = new Process();
+            process.StartInfo.FileName = "adb.exe";
+            process.StartInfo.Arguments = "-s " + deviceID + " shell";
+            // process.StartInfo.UseShellExecute = false;
+            process.Start();
+        }
     }
 }
