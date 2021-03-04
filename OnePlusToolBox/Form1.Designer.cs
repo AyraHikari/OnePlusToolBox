@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode29 = new System.Windows.Forms.TreeNode("");
-            System.Windows.Forms.TreeNode treeNode30 = new System.Windows.Forms.TreeNode("Apps", new System.Windows.Forms.TreeNode[] {
-            treeNode29});
-            System.Windows.Forms.TreeNode treeNode31 = new System.Windows.Forms.TreeNode("");
-            System.Windows.Forms.TreeNode treeNode32 = new System.Windows.Forms.TreeNode("Paralel Apps", new System.Windows.Forms.TreeNode[] {
-            treeNode31});
+            System.Windows.Forms.TreeNode treeNode45 = new System.Windows.Forms.TreeNode("");
+            System.Windows.Forms.TreeNode treeNode46 = new System.Windows.Forms.TreeNode("Apps", new System.Windows.Forms.TreeNode[] {
+            treeNode45});
+            System.Windows.Forms.TreeNode treeNode47 = new System.Windows.Forms.TreeNode("");
+            System.Windows.Forms.TreeNode treeNode48 = new System.Windows.Forms.TreeNode("Paralel Apps", new System.Windows.Forms.TreeNode[] {
+            treeNode47});
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -426,17 +426,17 @@
             // 
             this.treeView1.Location = new System.Drawing.Point(6, 19);
             this.treeView1.Name = "treeView1";
-            treeNode29.Name = "Node2";
-            treeNode29.Text = "";
-            treeNode30.Name = "Apps1";
-            treeNode30.Text = "Apps";
-            treeNode31.Name = "Node3";
-            treeNode31.Text = "";
-            treeNode32.Name = "Apps2";
-            treeNode32.Text = "Paralel Apps";
+            treeNode45.Name = "Node2";
+            treeNode45.Text = "";
+            treeNode46.Name = "Apps1";
+            treeNode46.Text = "Apps";
+            treeNode47.Name = "Node3";
+            treeNode47.Text = "";
+            treeNode48.Name = "Apps2";
+            treeNode48.Text = "Paralel Apps";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode30,
-            treeNode32});
+            treeNode46,
+            treeNode48});
             this.treeView1.Size = new System.Drawing.Size(490, 133);
             this.treeView1.TabIndex = 7;
             // 
@@ -460,7 +460,7 @@
             this.groupBox2.Size = new System.Drawing.Size(510, 51);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Uninstall";
+            this.groupBox2.Text = "Uninstall from Paralel Storage";
             // 
             // button10
             // 
@@ -470,6 +470,7 @@
             this.button10.TabIndex = 1;
             this.button10.Text = "Uninstall";
             this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // comboBox3
             // 
@@ -477,6 +478,7 @@
             this.comboBox3.Location = new System.Drawing.Point(6, 19);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(417, 21);
+            this.comboBox3.Sorted = true;
             this.comboBox3.TabIndex = 0;
             this.comboBox3.Text = "Select apk from paralel storage";
             // 
@@ -493,7 +495,7 @@
             this.groupBox1.Size = new System.Drawing.Size(510, 77);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Install";
+            this.groupBox1.Text = "Install to Paralel Storage";
             // 
             // button6
             // 
@@ -529,6 +531,7 @@
             this.button3.TabIndex = 1;
             this.button3.Text = "Install";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // comboBox2
             // 
@@ -536,6 +539,7 @@
             this.comboBox2.Location = new System.Drawing.Point(6, 19);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(417, 21);
+            this.comboBox2.Sorted = true;
             this.comboBox2.TabIndex = 0;
             this.comboBox2.Text = "Install from App list";
             // 

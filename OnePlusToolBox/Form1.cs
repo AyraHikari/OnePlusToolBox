@@ -397,5 +397,43 @@ namespace OnePlusToolBox
             PSlog.SelectionStart = PSlog.Text.Length;
             PSlog.ScrollToCaret();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (comboBox2.Text == "Install from App list") { return; }
+            groupBox1.Enabled = false;
+            groupBox2.Enabled = false;
+            groupBox3.Enabled = false;
+            return;
+
+            // TODO
+            string clog = "Console log:\n";
+            clog += "> Pulling apps...\n";
+            PSlog.Text = clog;
+
+            var ret = adb("shell pm path " + comboBox2.Text);
+            bool exists = System.IO.Directory.Exists("temp");
+            if (!exists) { System.IO.Directory.CreateDirectory("temp"); }
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (comboBox3.Text == "Select apk from paralel storage") { return; }
+            groupBox1.Enabled = false;
+            groupBox2.Enabled = false;
+            groupBox3.Enabled = false;
+            string clog = "Console log:";
+            clog += "\n> Uninstalling " + comboBox3.Text + "...";
+            PSlog.Text = clog;
+
+            var ret = adb("shell pm uninstall --user 999 " + comboBox3.Text);
+            clog += "\n> " + ret;
+            PSlog.Text = clog;
+
+            groupBox1.Enabled = true;
+            groupBox2.Enabled = true;
+            groupBox3.Enabled = true;
+        }
     }
 }
