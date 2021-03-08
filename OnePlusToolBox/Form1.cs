@@ -417,7 +417,8 @@ namespace OnePlusToolBox
 
             var ret = adb("shell pm path " + comboBox2.Text);
             bool exists = System.IO.Directory.Exists("temp");
-            if (!exists) { System.IO.Directory.CreateDirectory("temp"); }
+            if (exists) { System.IO.Directory.Delete(@"temp", true); }
+            System.IO.Directory.CreateDirectory("temp");
 
             var pakname1 = ret.Split(new string[] { "package:" }, StringSplitOptions.None);
             if (pakname1.Length > 1)
