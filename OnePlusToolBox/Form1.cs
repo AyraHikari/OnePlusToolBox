@@ -11,6 +11,8 @@ namespace OnePlusToolBox
 {
     public partial class Form1 : Form
     {
+        string AppVersion = "0.1.";
+        int RevisionNumber = (int)(DateTime.UtcNow - new DateTime(2010, 1, 1)).TotalDays;
         int ADBrecommend = 41;
 
         string connectIP = "";
@@ -173,9 +175,10 @@ namespace OnePlusToolBox
                     break;
                 }
             }
+            
             return true;
         }
-
+    
         public bool refresh()
         {
             DeviceList.Items.Clear();
@@ -223,6 +226,7 @@ namespace OnePlusToolBox
 
         private void DeviceList_Load(object sender, EventArgs e)
         {
+            this.Text = "OnePlus ToolBox (" + AppVersion + RevisionNumber.ToString() + ")";
             textBox2.Text = Properties.Settings.Default.data_ip;
             DeviceList.Items.Clear();
             // Check ADB version
@@ -282,6 +286,8 @@ namespace OnePlusToolBox
             PSlog.Text = clog;
             var pak1 = adb("shell pm list packages");
             treeView1.Nodes.Clear();
+            comboBox2.Items.Clear();
+            comboBox3.Items.Clear();
             var spak1 = pak1.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             treeView1.Nodes.Add("Apps");
             foreach (string lpak1 in spak1)
@@ -404,9 +410,7 @@ namespace OnePlusToolBox
             groupBox1.Enabled = false;
             groupBox2.Enabled = false;
             groupBox3.Enabled = false;
-            return;
-
-            // TODO
+            
             string clog = "Console log:\n";
             clog += "> Pulling apps...\n";
             PSlog.Text = clog;
@@ -415,6 +419,37 @@ namespace OnePlusToolBox
             bool exists = System.IO.Directory.Exists("temp");
             if (!exists) { System.IO.Directory.CreateDirectory("temp"); }
 
+            var pakname1 = ret.Split(new string[] { "package:" }, StringSplitOptions.None);
+            if (pakname1.Length > 1)
+            {
+                foreach (string pack in pakname1)
+                {
+                    var pakfname = pack.Split(new string[] { "/" }, StringSplitOptions.None);
+                    var o = adb("pull " + outsplit(pack) + " temp/" + outsplit(pakfname[pakfname.Length - 1]));
+                }
+            } else {
+                clog += "> Failed, command failed (1)\n";
+                PSlog.Text = clog;
+                groupBox1.Enabled = true;
+                groupBox2.Enabled = true;
+                groupBox3.Enabled = true;
+                return;
+            }
+
+            clog += "> Installing...\n";
+            PSlog.Text = clog;
+
+            var apps = "";
+            string[] apks = System.IO.Directory.GetFiles(@"temp/", "*.apk");
+            foreach (string pack in apks) { apps += pack + " "; }
+            var inst = adb("install-multiple --user 999 " + apps);
+            System.IO.Directory.Delete(@"temp", true);
+            clog += "> " + inst;
+            PSlog.Text = clog;
+
+            groupBox1.Enabled = true;
+            groupBox2.Enabled = true;
+            groupBox3.Enabled = true;
         }
 
         private void button10_Click(object sender, EventArgs e)
