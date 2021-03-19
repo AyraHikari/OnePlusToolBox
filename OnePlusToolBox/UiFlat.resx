@@ -117,47 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="ic_op_red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_op_red.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ic_op_white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ic_op_white.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="OnePlusSans_Black" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OnePlusSans-Black.ttf;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OnePlusSans_BlackItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OnePlusSans-BlackItalic.ttf;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OnePlusSans_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OnePlusSans-Bold.ttf;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OnePlusSans_BoldItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OnePlusSans-BoldItalic.ttf;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OnePlusSans_Italic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OnePlusSans-Italic.ttf;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OnePlusSans_Light" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OnePlusSans-Light.ttf;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OnePlusSans_LightItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OnePlusSans-LightItalic.ttf;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OnePlusSans_Medium" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OnePlusSans-Medium.ttf;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OnePlusSans_MediumItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OnePlusSans-MediumItalic.ttf;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OnePlusSans_Regular" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OnePlusSans-Regular.ttf;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OnePlusSans_Thin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OnePlusSans-Thin.ttf;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="OnePlusSans_ThinItalic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\OnePlusSans-ThinItalic.ttf;System.Byte[], mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
 </root>

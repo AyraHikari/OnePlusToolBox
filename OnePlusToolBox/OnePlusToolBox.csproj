@@ -37,6 +37,10 @@
   <PropertyGroup>
     <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -52,6 +56,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UiFlat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UiFlat.Designer.cs">
+      <DependentUpon>UiFlat.cs</DependentUpon>
     </Compile>
     <Compile Include="Pairing.cs">
       <SubType>Form</SubType>
@@ -77,6 +87,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UiFlat.resx">
+      <DependentUpon>UiFlat.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -87,6 +100,25 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\OnePlusSans-Black.ttf" />
+    <None Include="Resources\OnePlusSans-BlackItalic.ttf" />
+    <None Include="Resources\OnePlusSans-Bold.ttf" />
+    <None Include="Resources\OnePlusSans-BoldItalic.ttf" />
+    <None Include="Resources\OnePlusSans-Italic.ttf" />
+    <None Include="Resources\OnePlusSans-Light.ttf" />
+    <None Include="Resources\OnePlusSans-LightItalic.ttf" />
+    <None Include="Resources\OnePlusSans-Medium.ttf" />
+    <None Include="Resources\OnePlusSans-MediumItalic.ttf" />
+    <None Include="Resources\OnePlusSans-Regular.ttf" />
+    <None Include="Resources\OnePlusSans-Thin.ttf" />
+    <None Include="Resources\OnePlusSans-ThinItalic.ttf" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\ic_op_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_op_white.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

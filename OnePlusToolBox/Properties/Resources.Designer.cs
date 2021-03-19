@@ -59,5 +59,145 @@ namespace OnePlusToolBox.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_op_red {
+            get {
+                object obj = ResourceManager.GetObject("ic_op_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ic_op_white {
+            get {
+                object obj = ResourceManager.GetObject("ic_op_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] OnePlusSans_Black {
+            get {
+                object obj = ResourceManager.GetObject("OnePlusSans_Black", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] OnePlusSans_BlackItalic {
+            get {
+                object obj = ResourceManager.GetObject("OnePlusSans_BlackItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] OnePlusSans_Bold {
+            get {
+                object obj = ResourceManager.GetObject("OnePlusSans_Bold", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] OnePlusSans_BoldItalic {
+            get {
+                object obj = ResourceManager.GetObject("OnePlusSans_BoldItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] OnePlusSans_Italic {
+            get {
+                object obj = ResourceManager.GetObject("OnePlusSans_Italic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] OnePlusSans_Light {
+            get {
+                object obj = ResourceManager.GetObject("OnePlusSans_Light", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] OnePlusSans_LightItalic {
+            get {
+                object obj = ResourceManager.GetObject("OnePlusSans_LightItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] OnePlusSans_Medium {
+            get {
+                object obj = ResourceManager.GetObject("OnePlusSans_Medium", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] OnePlusSans_MediumItalic {
+            get {
+                object obj = ResourceManager.GetObject("OnePlusSans_MediumItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] OnePlusSans_Regular {
+            get {
+                object obj = ResourceManager.GetObject("OnePlusSans_Regular", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] OnePlusSans_Thin {
+            get {
+                object obj = ResourceManager.GetObject("OnePlusSans_Thin", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] OnePlusSans_ThinItalic {
+            get {
+                object obj = ResourceManager.GetObject("OnePlusSans_ThinItalic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
     }
 }
